@@ -10,6 +10,7 @@ create src folder and pull git
 ```
 
 ```
+(HOST)
 ./docker-build-iron.sh
 ```
 ## Usage:
@@ -24,6 +25,7 @@ TODO: step by step readme
 after first build, use:
 
 ```
+(HOST)
 docker-run-explorer-iron.sh
 ```
 
@@ -41,11 +43,13 @@ docker commit ros-iron-explorer ros-iron-explorer:prebuilt
 
 run explorer example
 ```
+(CONT)
 ./run_explorer
 ```
 
 run prebuilt container:
 
 ```
+(HOST)
 docker-run-explorer-iron-prebuilt.sh
 ```
