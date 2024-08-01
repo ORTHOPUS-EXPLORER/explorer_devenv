@@ -9,11 +9,15 @@ pipelines:
   default:
     - parallel:
       - step:
-          name: 'Pull project'
+          name: '1 step build'
           script:
-            - echo "Installing dependencies with rosdep"
+            - apt-get install openssh-client
             - ./setup_devenv.sh
+            - ls
+            - ls src/
             - ./build.sh
+            - ls
+            - ls install/
             - ./run_explorer.sh
       # - step:
       #     name: 'Install dependancies and build'
