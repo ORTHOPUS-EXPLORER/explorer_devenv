@@ -1,0 +1,25 @@
+# This is an example Starter pipeline configuration
+# Use a skeleton to build, test and deploy using manual and parallel steps
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+
+image: ros:iron
+
+pipelines:
+  default:
+    - parallel:
+      - step:
+          name: 'Pull project'
+          script:
+            - echo "Installing dependencies with rosdep"
+            - ./setup_devenv.sh
+      - step:
+          name: 'Install dependancies and build'
+          script:
+            - echo "Install and build"
+            - ./build.sh
+      - step:
+          name: 'Test'
+          script:
+            - echo "Testing"
+            - ./run_explorer.sh
