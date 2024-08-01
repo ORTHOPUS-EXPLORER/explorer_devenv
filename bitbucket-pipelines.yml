@@ -16,6 +16,8 @@ pipelines:
             - ./setup_devenv.sh
             - ls
             - ls src/
+            - ls /opt/ros/iron/
+            - source /opt/ros/iron/setup.bash
             - ./build.sh
             - ls
             - ls install/
