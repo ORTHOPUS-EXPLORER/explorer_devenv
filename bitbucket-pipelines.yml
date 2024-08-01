@@ -19,7 +19,6 @@ pipelines:
             - ./build.sh
             - ls
             - ls install/
-            - ./run_explorer.sh
       # - step:
       #     name: 'Install dependancies and build'
       #     script:
