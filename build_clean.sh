@@ -1,5 +1,6 @@
 #! /bin/bash
 
+./clean.sh
 apt update
 #apt install -y libnlopt0
 source /opt/ros/iron/setup.bash
