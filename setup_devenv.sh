@@ -1,5 +1,7 @@
 #! /bin/bash
 
+mkdir -p src
+
 git clone git@bitbucket.org:orthopusactuators/explorer_docs.git
 mkdir src
 cd src
