@@ -29,6 +29,13 @@ you will en up in a shell inside your contaier (CONT), showing something like:
 root@thomas-Precision-3560:/src#
 ```
 
+If you need another terminal inside the container, you can use:
+
+```
+(CONT)
+./docker-exec-iron.sh
+```
+
 From the container, build the code. this script will install all required dependancies with rosdep:
 
 ```
