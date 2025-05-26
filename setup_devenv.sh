@@ -2,8 +2,8 @@
 
 mkdir -p src
 
-git clone git@bitbucket.org:orthopusactuators/explorer_docs.git
+git clone git@github.com:ORTHOPUS-EXPLORER/explorer_docs.git
 mkdir src
 cd src
-git clone --recursive git@bitbucket.org:orthopusactuators/explorer_ws.git
+git clone --recursive git@github.com:ORTHOPUS-EXPLORER/explorer_ws.git
 
