@@ -15,13 +15,13 @@ build the docker image that will contain the ros2 stack. You don't need to insta
 (however, you can install the ROS2 stack directly on your computer, withour docker)
 ```
 (HOST)
-./docker-build-iron.sh
+./docker-build-jazzy.sh
 ```
 
 run container:
 ```
 (HOST)
-docker-run-explorer-iron.sh
+docker-run-explorer-jazzy.sh
 ```
 you will en up in a shell inside your contaier (CONT), showing something like:
 
@@ -33,7 +33,7 @@ If you need another terminal inside the container, you can use:
 
 ```
 (CONT)
-./docker-exec-iron.sh
+./docker-exec-jazzy.sh
 ```
 
 From the container, build the code. this script will install all required dependancies with rosdep:
@@ -52,14 +52,14 @@ It is recommanded to commit your docker only once, after the first build and ros
 
 ```
 (HOST) - new terminal
-./docker-commit-explorer-iron.sh
+./docker-commit-explorer-jazzy.sh
 ```
 
 If you saved your container for later, you can start it using:
 
 ```
 (HOST)
-docker-run-explorer-iron-prebuilt.sh
+docker-run-explorer-jazzy-prebuilt.sh
 ```
 
 ## Usage:
@@ -82,7 +82,7 @@ Now, you are ready to work on the explorer project.
 
 ## Setting up CAN interface:
 
-The docker run script (docker-run-explorer-iron.sh) uses docker run with arguments to share hardware graphical and the base folder between (HOST) and (CONT). Any interface (ttyUSBx, CAN, etc) that is available on the (HOST) should be available inside the container (CONT).
+The docker run script (docker-run-explorer-jazzy.sh) uses docker run with arguments to share hardware graphical and the base folder between (HOST) and (CONT). Any interface (ttyUSBx, CAN, etc) that is available on the (HOST) should be available inside the container (CONT).
 
 Enable the USB-CAN interface at 1Mbs from the host:
 
