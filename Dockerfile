@@ -1,4 +1,4 @@
-FROM ros:iron
+FROM osrf/ros:iron-desktop
 
 RUN apt update
 RUN apt install -y ros-iron-plotjuggler ros-iron-plotjuggler-ros 
