@@ -2,11 +2,11 @@
 
 PASS=0
 FAIL=0
-TRIES=10
+TRIES=100
 
 # Wait time for OpenGL and integrator messages (in seconds)
 TIMEOUT=120
-TIMEOUT2=6
+TIMEOUT2=20
 
 for ((i=1; i<=$TRIES; i++))
 do
