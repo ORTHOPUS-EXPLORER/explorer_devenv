@@ -4,3 +4,6 @@ install/
 log/
 explorer_docs/
 explorer_ws/
+.vscode/
+launch_log_run_*
+rosbag2_*
