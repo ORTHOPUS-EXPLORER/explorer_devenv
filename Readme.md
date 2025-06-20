@@ -90,4 +90,13 @@ Enable the USB-CAN interface at 1Mbs from the host:
 (HOST)
 ./setcan0_1M.sh
 ```
-Now, you can run the packages that actually communicates with hardware, not only simulation.
+Now, you can run the packages that actually communicates with hardware, not only simulation.  
+  
+If you don't want to do this each time, you can add a udev rules that will run this script automatically by running:  
+  
+```
+(HOST)
+./set_udev.sh
+```  
+  
+It will copy the script to /usr/local/bin and add the udev rule.
