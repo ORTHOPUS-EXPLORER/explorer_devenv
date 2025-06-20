@@ -20,8 +20,13 @@ RUN apt install -y can-utils
 
 #RUN pip install aenum
 
-#prevent interferences with other computers running ROS2:
-ENV ROS_LOCALHOST_ONLY=1
+RUN apt install -y --no-install-recommends ros-iron-rmw-cyclonedds-cpp
+
+
 
 COPY . ./src/
 WORKDIR src
+
+RUN echo "source /src/source.sh" >> ~/.bashrc
+RUN chmod +x /src/entrypoint.sh
+ENTRYPOINT ["/src/entrypoint.sh"]
