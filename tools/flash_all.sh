@@ -4,8 +4,6 @@ VESCPP="../src/explorer_ws/explorer_stack/libs/orthopus_vesc/lib/vescpp/build/"
 
 cd "$VESCPP"
 
-./proxyAll.sh bench o_comm stream_rate 0
-
 can_port=""
 ids=""
 if [ -z "$1" -o "$1" = "bench" ]; then
@@ -30,5 +28,5 @@ for i in $ids; do
     cmd="$cmd_base -i $i flash_fw app /home/thomas/Documents/vesc_devenv_github/vesc_devenv/vesc_firmware/build/a50s_v23c_8s/a50s_v23c_8s.bin"
     echo $cmd
     $cmd;
-    sleep 1
+    sleep 5
 done

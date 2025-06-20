@@ -36,5 +36,5 @@ for i in $ids; do
     cmd="$cmd_base -i $i proxy $proxy_cmd"
     echo $cmd
     $cmd;
-    sleep 1
+    sleep 2
 done

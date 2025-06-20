@@ -4,7 +4,6 @@ VESCPP="../src/explorer_ws/explorer_stack/libs/orthopus_vesc/lib/vescpp/build/"
 
 cd "$VESCPP"
 ls
-./cli/vescpp_cli -i 11 -P can0 proxy fwinfo
 
 can_port=""
 dir=""
