@@ -21,7 +21,7 @@ build the docker image that will contain the ros2 stack. You don't need to insta
 run container:
 ```
 (HOST)
-docker-run-explorer-iron.sh
+./docker-run-explorer-iron.sh
 ```
 you will en up in a shell inside your contaier (CONT), showing something like:
 
@@ -32,7 +32,7 @@ root@thomas-Precision-3560:/src#
 If you need another terminal inside the container, you can use:
 
 ```
-(CONT)
+(HOST)
 ./docker-exec-iron.sh
 ```
 
