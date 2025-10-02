@@ -3,7 +3,7 @@ FROM osrf/ros:iron-desktop
 #fix GPG keys error
 RUN rm /etc/apt/sources.list.d/ros2*
 RUN apt update
-RUN apt install curl
+RUN apt install -y curl
 RUN apt-key del F42ED6FBAB17C654
 RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
 RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null

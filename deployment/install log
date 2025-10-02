@@ -1,0 +1,45 @@
+Install log on new ubuntu 22.04, light
+
+
+
+
+
+sudo apt install git
+
+sudo apt install can-utils
+
+sudo add-apt-repository ppa:indicator-multiload/stable-daily
+
+sudo apt update
+
+sudo apt install indicator-multiload
+
+sudo apt install lm-sensors
+
+sudo apt install vim
+
+clone with https instead of ssh to avoid creating a user
+
+Install docker:
+https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+
+Fix permissions:
+https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket
+
+
+set nopassword rules:
+
+sudo visudo
+
+add those lines and reboot:
+#allow user to run ip link set commands withoud entering password to run ORTHOPUS EXPLORER robot without password
+
+orthopus ALL=(ALL) NOPASSWD: /sbin/ip link set can0 up type can bitrate 1000000, /sbin/ip link set can0 txqueuelen 100
+
+disable auto lock screen and blackscreen delay: parametres/confidentialité/écran + désactiver verrouillage auto
+
+doc: 
+BAD link:
+To use docker, visit this link : Explorer’s Docker Git, and clone the Git repository.
+
+

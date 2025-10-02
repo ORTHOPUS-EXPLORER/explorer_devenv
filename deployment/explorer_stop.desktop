@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=EXPLORER STOP
+Comment=Runs EXPLORER cartesian control
+Exec=gnome-terminal -e "bash -c 'cd /home/orthopus/Documents/explorer_devenv/ && ./docker-stop-iron.sh'"
+#Icon=/home/orthopus/orthopus_icon.png
+
+Terminal=false
+Type=Application
+Categories=Utility;
