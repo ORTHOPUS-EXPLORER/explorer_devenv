@@ -16,7 +16,7 @@ do
     TMPFILE=$(mktemp)
 
     # Start the launch, no terminal output
-    (ros2 launch ros2_control_explorer cartesian_control.launch.py spacenav:=false) > "$TMPFILE" 2>&1 &
+    (ros2 launch explorer_bringup cartesian_control.launch.py spacenav:=false) > "$TMPFILE" 2>&1 &
     LAUNCH_PID=$!
 
     # Wait up to 120 seconds for the rviz2 OpenGL line

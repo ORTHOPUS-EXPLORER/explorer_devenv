@@ -9,4 +9,4 @@ rosdep install -i -y --from-paths .
 #rosdep install -i -y --from-paths .
 colcon build --symlink-install
 source install/setup.bash
-#ros2 launch ros2_control_explorer explorer_spacenav.launch.py gui:=true
+#ros2 launch explorer_bringup explorer_spacenav.launch.py gui:=true

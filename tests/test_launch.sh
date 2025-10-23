@@ -19,7 +19,7 @@ do
 
     LOGFILE="launch_log_run_${i}.txt"
 
-    (ros2 launch ros2_control_explorer cartesian_control.launch.py spacenav:=false) > "$LOGFILE" 2>&1 &
+    (ros2 launch explorer_bringup cartesian_control.launch.py spacenav:=false) > "$LOGFILE" 2>&1 &
     LAUNCH_PID=$!
 
     # Wait up to TIMEOUT seconds for the OpenGL line
