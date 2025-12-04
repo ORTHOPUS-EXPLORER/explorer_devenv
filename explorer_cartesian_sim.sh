@@ -2,4 +2,4 @@
 
 . source.sh
 ./killall.sh
-ros2 launch ros2_control_explorer cartesian_control.launch.py spacenav:=false
+ros2 launch explorer_bringup cartesian_control.launch.py spacenav:=false
