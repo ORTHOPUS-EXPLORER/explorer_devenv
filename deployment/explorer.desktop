@@ -2,7 +2,7 @@
 Name=EXPLORER
 Comment=Runs EXPLORER cartesian control
 Exec=gnome-terminal -- bash -c "cd /home/orthopus/Documents/explorer_devenv/ && ./docker-run-explorer-mode_0.sh $SHELL"
-#Icon=/home/orthopus/orthopus_icon.png
+Icon=/home/orthopus/orthopus_icon.png
 
 Terminal=false
 Type=Application
