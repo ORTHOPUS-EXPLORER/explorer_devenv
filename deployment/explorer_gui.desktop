@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=EXPLORER GUI
+Comment=EXPLORER Web Interface
+Exec=firefox --new-window http://0.0.0.0:8080 --zoom 1.2
+Terminal=false
+Type=Application
+Categories=Utility;Development;
+StartupNotify=true
