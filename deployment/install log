@@ -42,4 +42,18 @@ doc:
 BAD link:
 To use docker, visit this link : Explorer’s Docker Git, and clone the Git repository.
 
+Shortcuts:
 
+Place .desktop files in .local/share/applications and icons in /home/orthopus
+
+disable hibernate button:
+sudo mkdir -p /etc/systemd/sleep.conf.d
+sudo nano /etc/systemd/sleep.conf.d/disable-suspend.conf
+Ajouter :
+[Sleep]
+AllowSuspend=no
+AllowHibernation=no
+AllowHybridSleep=no
+AllowSuspendThenHibernate=no
+Enregistrer puis redémarrer :
+sudo reboot
