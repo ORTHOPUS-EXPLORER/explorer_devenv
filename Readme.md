@@ -42,7 +42,9 @@ From the container, build the code. this script will install all required depend
 (CONT)
 ./build.sh
 ```
-after a first build, ./build_clean.sh cleans workspace and rebuilds from scratch
+after a first build, ./build_clean.sh cleans workspace and rebuilds from scratch.
+
+⚠ In case of errors, double check that you updated properly all submodules inside ```explorer_stack``` folder ⚠ 
 
 
 (OPTIONAL) in order to save time next time you want to work on the project, save the docker image for later:
