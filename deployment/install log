@@ -8,9 +8,9 @@ sudo apt install git
 
 sudo apt install can-utils
 
-sudo add-apt-repository ppa:indicator-multiload/stable-daily
-
-sudo apt update
+# Corentin: In my case indicator-multiload was already available and apt was complaining about missing release file for this ppa so I just skipped this part
+# sudo add-apt-repository ppa:indicator-multiload/stable-daily
+# sudo apt update
 
 sudo apt install indicator-multiload
 
