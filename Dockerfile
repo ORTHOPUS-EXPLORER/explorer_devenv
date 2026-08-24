@@ -1,33 +1,21 @@
-FROM osrf/ros:iron-desktop
+FROM ghcr.io/orthopus-explorer/ros-iron-explorer-ws/dev:latest
 
-#fix GPG keys error
-RUN rm /etc/apt/sources.list.d/ros2*
-RUN apt update
-RUN apt install -y curl
-RUN apt-key del F42ED6FBAB17C654
-RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
-RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+ENV EXPLORER_DEVENV_DIR=/opt/explorer-devenv
+ENV PATH="${EXPLORER_DEVENV_DIR}:${EXPLORER_DEVENV_DIR}/impedance:${EXPLORER_DEVENV_DIR}/tools:${EXPLORER_DEVENV_DIR}/tests:${PATH}"
 
+WORKDIR ${EXPLORER_DEVENV_DIR}
 
-RUN apt update
-RUN apt install -y ros-iron-plotjuggler ros-iron-plotjuggler-ros 
-RUN apt install -y vim
-RUN apt install -y tmux
-RUN apt install -y python3-pip
-RUN apt install -y iproute2
-#RUN apt install -y ros-iron-ros2-controllers-test-nodes #TODO: add in appropriate package.xml
-RUN apt install -y can-utils
-RUN apt install -y terminator
+COPY build.sh build_clean.sh clean.sh rosdep_install.sh killall.sh \
+     enable_pos_all.sh \
+     actuator_effort.sh actuator_pos.sh actuator_velocity.sh \
+     explorer_cartesian_real.sh explorer_cartesian_real_spacenav.sh explorer_cartesian_real_spacenav_2.sh explorer_cartesian_sim.sh \
+     explorer_joint_real.sh explorer_joint_sim.sh explorer_mode_0.sh \
+     setcan0_1M.sh setvcan_cont.sh \
+     ./
+COPY impedance/ ./impedance/
+COPY tools/ ./tools/
+COPY tests/ ./tests/
 
-#RUN pip install aenum
+RUN chmod +x *.sh impedance/*.sh tools/*.sh tests/*.sh
 
-RUN apt install -y --no-install-recommends ros-iron-rmw-cyclonedds-cpp
-
-
-
-COPY . ./src/
-WORKDIR src
-
-RUN echo "source /src/source.sh" >> ~/.bashrc
-RUN chmod +x /src/entrypoint.sh
-ENTRYPOINT ["/src/entrypoint.sh"]
+WORKDIR $ROS_WS
