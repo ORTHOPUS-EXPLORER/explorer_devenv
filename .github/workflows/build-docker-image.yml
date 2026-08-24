@@ -1,0 +1,16 @@
+name: Build docker image (dev)
+on:
+    push:
+      tags:
+          - '**'
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-and-push-dev-docker-image:
+    uses: ./.github/workflows/workflow-docker-image.yml
+    with:
+      image_name: dev
+    secrets: inherit
